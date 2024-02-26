@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextTaskName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Task Name" />
+
+    <EditText
+        android:id="@+id/editTextDueDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTaskName"
+        android:layout_marginTop="8dp"
+        android:hint="Due Date (MM/dd/yyyy)" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCompleted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDueDate"
+        android:layout_marginTop="8dp"
+        android:text="Completed" />
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBoxCompleted"
+        android:layout_marginTop="16dp"
+        android:text="Add" />
+
+    <Button
+        android:id="@+id/buttonEditTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/buttonAdd"
+        android:layout_alignBaseline="@+id/buttonAdd"
+        android:layout_marginTop="16dp"
+        android:text="Edit" />
+
+    <Button
+        android:id="@+id/buttonDeleteCompleted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonAdd"
+        android:layout_marginTop="16dp"
+        android:text="Delete Completed Tasks" />
+
+    <ListView
+        android:id="@+id/listViewTasks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonDeleteCompleted"
+        android:layout_marginTop="16dp"
+        />
+
+</RelativeLayout>
